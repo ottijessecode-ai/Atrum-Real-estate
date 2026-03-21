@@ -74,9 +74,9 @@ function Concierge() {
 
           <div className="space-y-8">
             {[
-              { icon: 'â—Ž', label: 'Global Intelligence Unit', val: '+1 212 555 0190' },
-              { icon: 'â—¶', label: 'Private Advisory Email', val: 'private@aurum.estate' },
-              { icon: 'â—‰', label: 'Secure Communication', val: 'Signal / WhatsApp' },
+              { icon: '◎', label: 'Global Intelligence Unit', val: '+1 212 555 0190' },
+              { icon: '▶', label: 'Private Advisory Email', val: 'private@aurum.estate' },
+              { icon: '◉', label: 'Secure Communication', val: 'Signal / WhatsApp' },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-5">
                 <span className="text-brand-gold text-2xl mt-1">{c.icon}</span>
@@ -91,7 +91,7 @@ function Concierge() {
           <div className="mt-16 pt-10 border-t border-white/5">
             <p className="font-heading text-[9px] text-white/20 tracking-widest uppercase mb-4">Availability Threshold</p>
             <p className="font-body text-xs text-white/40 leading-relaxed uppercase tracking-widest">
-              Monâ€“Sat Â· 09:00â€”19:00 GMT<br />
+              Mon–Sat · 09:00—19:00 GMT<br />
               Global Response Coordination Active
             </p>
           </div>
@@ -207,7 +207,7 @@ function Concierge() {
           ) : (
             <div className="success-msg max-w-md w-full text-center py-20">
               <div className="w-24 h-24 rounded-full bg-brand-gold/10 border border-brand-gold flex items-center justify-center mx-auto mb-10">
-                <span className="text-brand-gold text-4xl">âœ“</span>
+                <span className="text-brand-gold text-4xl">✓</span>
               </div>
               <h2 className="font-display text-4xl md:text-5xl text-[#1A1A1A] tracking-tighter mb-6">Protocol Initiated.</h2>
               <p className="font-body text-[#1A1A1A]/50 text-base leading-relaxed mb-12">

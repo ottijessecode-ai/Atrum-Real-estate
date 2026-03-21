@@ -17,7 +17,7 @@ const footerLinks = {
     { label: '+1 (212) 555-0190', href: 'tel:+12125550190' },
     { label: 'private@aurum.estate', href: 'mailto:private@aurum.estate' },
     { label: '432 Park Avenue, NYC', href: '#' },
-    { label: 'Geneva Â· Dubai Â· London', href: '/branches' },
+    { label: 'Geneva · Dubai · London', href: '/branches' },
   ],
 };
 
@@ -90,7 +90,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <p className="font-heading text-[10px] text-[#1A1A1A]/30 tracking-widest uppercase">
-          Â© 2025 AURUM Estate Â· Licensed Real Estate Brokerage
+          © 2025 AURUM Estate · Licensed Real Estate Brokerage
         </p>
         <div className="flex gap-8">
           {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((t) => (

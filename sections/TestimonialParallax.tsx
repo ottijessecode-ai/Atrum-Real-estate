@@ -8,21 +8,21 @@ const testimonials = [
     quote: 'AURUM found us a property that doesn\'t exist on any public market. The discretion and expertise they showed throughout the process was unparalleled.',
     author: 'A.R.',
     role: 'Private Equity Partner, London',
-    property: 'Acquired Â· The Connaught Residence',
-    value: 'Â£22.4M',
+    property: 'Acquired · The Connaught Residence',
+    value: '£22.4M',
   },
   {
     quote: 'Three other agencies had failed before AURUM succeeded. They understand that at this level, it\'s not just about the property â€” it\'s about the life it enables.',
     author: 'S.M.',
     role: 'Tech Founder, Dubai',
-    property: 'Acquired Â· Palm Jumeirah Villa',
+    property: 'Acquired · Palm Jumeirah Villa',
     value: 'AED 65M',
   },
   {
     quote: 'The portfolio they assembled for us over 18 months outperformed every benchmark in the luxury segment. They truly think as wealth managers, not just agents.',
     author: 'F.B.',
     role: 'Family Office Principal, Geneva',
-    property: '7-Property Portfolio Â· Managed',
+    property: '7-Property Portfolio · Managed',
     value: 'CHF 180M',
   },
 ];
@@ -162,7 +162,7 @@ export function TestimonialParallax() {
             className="inline-flex items-center gap-3 px-8 py-4 bg-brand-dark text-white font-heading text-xs tracking-widest uppercase rounded-full transition-all duration-300 hover:bg-brand-gold hover:shadow-gold hover:scale-105"
           >
             Begin Your Journey
-            <span>â†’</span>
+            <span>→</span>
           </a>
         </div>
       </div>
