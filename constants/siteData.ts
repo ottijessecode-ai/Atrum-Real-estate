@@ -94,7 +94,7 @@ export const SITE_DATA = {
         id: 4,
         title: 'The Beaumont Estate',
         location: 'Mayfair, London',
-        price: 'Â£18.2M',
+        price: '£18.2M',
         beds: 6,
         baths: 7,
         sqft: '9,650',

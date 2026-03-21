@@ -6,11 +6,11 @@ import Link from 'next/link';
 const categories = ['All', 'Waterfront', 'Urban', 'Alpine', 'Historic'];
 
 const catalog = [
-  { id: 1, title: 'CÃ´te d\'Azur Collection', category: 'Waterfront', count: 12, region: 'French Riviera', minPrice: 'â‚¬4.5M' },
-  { id: 2, title: 'City Apex Series', category: 'Urban', count: 8, region: 'New York Â· London Â· Dubai', minPrice: '$6M' },
-  { id: 3, title: 'Alpine Sanctuaries', category: 'Alpine', count: 6, region: 'Switzerland Â· Austria', minPrice: 'CHF 3.2M' },
-  { id: 4, title: 'Heritage Residences', category: 'Historic', count: 9, region: 'UK Â· France Â· Italy', minPrice: 'Â£2.8M' },
-  { id: 5, title: 'Marina Residences', category: 'Waterfront', count: 14, region: 'Dubai Â· Singapore Â· Monaco', minPrice: 'AED 8M' },
+  { id: 1, title: 'Côte d\'Azur Collection', category: 'Waterfront', count: 12, region: 'French Riviera', minPrice: '€4.5M' },
+  { id: 2, title: 'City Apex Series', category: 'Urban', count: 8, region: 'New York · London · Dubai', minPrice: '$6M' },
+  { id: 3, title: 'Alpine Sanctuaries', category: 'Alpine', count: 6, region: 'Switzerland · Austria', minPrice: 'CHF 3.2M' },
+  { id: 4, title: 'Heritage Residences', category: 'Historic', count: 9, region: 'UK · France · Italy', minPrice: '£2.8M' },
+  { id: 5, title: 'Marina Residences', category: 'Waterfront', count: 14, region: 'Dubai · Singapore · Monaco', minPrice: 'AED 8M' },
   { id: 6, title: 'Penthouse Index', category: 'Urban', count: 11, region: 'Global Top-Tier Cities', minPrice: '$8M' },
 ];
 

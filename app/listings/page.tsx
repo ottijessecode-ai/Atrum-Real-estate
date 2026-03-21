@@ -47,7 +47,7 @@ const allListings = [
     id: 4,
     title: 'The Beaumont Estate',
     location: 'Mayfair, London',
-    price: 'Â£18.2M',
+    price: '£18.2M',
     priceNum: 18200000,
     beds: 6,
     baths: 7,
@@ -72,8 +72,8 @@ const allListings = [
   {
     id: 6,
     title: 'The Grand Ocean Villa',
-    location: 'CÃ´te d\'Azur, France',
-    price: 'â‚¬45M',
+    location: 'Côte d\'Azur, France',
+    price: '€45M',
     priceNum: 45000000,
     beds: 9,
     baths: 11,
@@ -212,7 +212,7 @@ function Listings() {
 
                 {/* Arrow on hover */}
                 <div className="absolute bottom-6 right-6 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-[#1A1A1A]/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 shadow-sm">
-                  <span className="text-[#1A1A1A] text-lg">â†’</span>
+                  <span className="text-[#1A1A1A] text-lg">→</span>
                 </div>
               </div>
 

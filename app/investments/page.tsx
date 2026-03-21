@@ -139,10 +139,10 @@ function Investments() {
       {/* Key Metrics */}
       <div className="inv-stats max-w-[1600px] mx-auto px-6 lg:px-12 py-16 grid grid-cols-2 md:grid-cols-4 gap-6">
         {[
-          { v: '$4.2B', l: 'Total AUM', sub: 'â†‘ 21% YoY' },
+          { v: '$4.2B', l: 'Total AUM', sub: '↑ 21% YoY' },
           { v: '16.2%', l: 'Avg. Annual ROI', sub: 'Across all portfolios' },
           { v: '380+', l: 'Properties', sub: 'Under management' },
-          { v: 'Â£18.2M', l: 'Avg. Asset Value', sub: 'Per holding' },
+          { v: '£18.2M', l: 'Avg. Asset Value', sub: 'Per holding' },
         ].map((s) => (
           <div key={s.l} className="inv-stat p-6 bg-white rounded-3xl shadow-premium">
             <p className="font-display text-3xl text-brand-dark tracking-tighter mb-1">{s.v}</p>
@@ -155,7 +155,7 @@ function Investments() {
       {/* Charts */}
       <div className="charts-grid max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-8 pb-16">
         <div className="chart-box lg:col-span-2 bg-white rounded-3xl p-8 shadow-premium">
-          <h3 className="font-display text-xl text-brand-dark tracking-tight mb-2">Assets Under Management (2020â€“2025)</h3>
+          <h3 className="font-display text-xl text-brand-dark tracking-tight mb-2">Assets Under Management (2020–2025)</h3>
           <p className="font-heading text-xs text-brand-muted tracking-widest uppercase mb-6">USD Billions</p>
           <ResponsiveContainer width="100%" height={260}>
             <AreaChart data={yoyData}>
@@ -232,7 +232,7 @@ function Investments() {
                 <p className="font-heading text-xs text-brand-muted tracking-widest uppercase">AUM</p>
               </div>
               <div className="w-10 h-10 rounded-full border border-brand-border flex items-center justify-center group-hover:border-brand-gold group-hover:text-brand-gold text-brand-muted transition-all duration-300">
-                â†’
+                →
               </div>
             </div>
           ))}
