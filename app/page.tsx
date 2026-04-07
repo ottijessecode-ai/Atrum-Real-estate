@@ -6,10 +6,12 @@ import { FeaturedListings } from '@/sections/FeaturedListings';
 import { GlobeSection } from '@/sections/GlobeSection';
 import ProcessTimeline from '@/sections/ProcessTimeline';
 import { TestimonialParallax } from '@/sections/TestimonialParallax';
+import { SiteVisitModal } from '@/components/SiteVisitModal';
 
 const Home: React.FC = () => {
   return (
     <main className="bg-[#FFF0C3] overflow-x-hidden relative">
+      <SiteVisitModal />
       <div className="noise opacity-[0.03] pointer-events-none" />
       {/* 1. Canvas Hero (Scrolltelling) */}
       <Hero />

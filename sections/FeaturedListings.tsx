@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useEffect } from 'react';
+import { Search, ChevronDown } from 'lucide-react';
 import { gsap } from 'gsap';
 import { SITE_DATA } from '../constants/siteData';
 
@@ -50,27 +51,84 @@ export function FeaturedListings() {
 
   return (
     <section ref={sectionRef} className="relative z-10 bg-brand-cream flex flex-col justify-center py-16 md:py-24 overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 mb-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-          <div className="lg:col-span-8 text-center lg:text-left">
-            <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start reveal-header">
-              <span className="h-px w-12 bg-brand-gold" />
-              <span className="font-heading text-[10px] tracking-widest uppercase text-brand-gold">{featured.tag}</span>
-            </div>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-[4.5rem] text-[#1A1A1A] tracking-tighter leading-[1] reveal-header">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 mb-8 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 reveal-header">
+          <div className="flex items-center gap-4">
+            <span className="h-[2px] w-8 bg-[#1A1A1A]" />
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-[#1A1A1A] tracking-tight m-0">
               {featured.title}
             </h2>
           </div>
-          <div className="lg:col-span-4 lg:text-right hidden lg:block reveal-header">
+          <div>
             <a
               href="/listings"
-              className="group inline-flex items-center gap-4 font-heading text-[10px] text-[#1A1A1A]/40 tracking-[0.2em] uppercase hover:text-brand-gold transition-all duration-500"
+              className="inline-flex items-center justify-center font-sans text-sm text-white bg-[#111625] px-6 py-2.5 rounded-full hover:bg-brand-gold transition-colors duration-300"
             >
-              Explore Full Catalog
-              <span className="w-10 h-10 rounded-full border border-[#1A1A1A]/10 flex items-center justify-center transition-all duration-500 group-hover:bg-brand-gold group-hover:text-white group-hover:border-brand-gold">
-                â†’
-              </span>
+              Explore All Properties
             </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Search Filter Container */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 mb-12 w-full reveal-header">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Property Title</label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4" />
+              <input type="text" placeholder="Search..." className="w-full bg-white/40 text-[#1A1A1A] pl-10 pr-4 py-3 rounded-lg border border-[#1A1A1A]/10 outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans placeholder:text-[#1A1A1A]/40 text-sm" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Listing Status</label>
+            <div className="relative">
+              <select className="w-full bg-white/40 text-[#1A1A1A] px-4 py-3 rounded-lg border border-[#1A1A1A]/10 appearance-none outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans text-sm">
+                <option>All</option>
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4 pointer-events-none" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Property Type</label>
+            <div className="relative">
+              <select className="w-full bg-white/40 text-[#1A1A1A] px-4 py-3 rounded-lg border border-[#1A1A1A]/10 appearance-none outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans text-sm">
+                <option>All</option>
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4 pointer-events-none" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Property Location</label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4" />
+              <input type="text" placeholder="Search..." className="w-full bg-white/40 text-[#1A1A1A] pl-10 pr-4 py-3 rounded-lg border border-[#1A1A1A]/10 outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans placeholder:text-[#1A1A1A]/40 text-sm" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Bedroom</label>
+            <input type="text" placeholder="Number..." className="w-full bg-white/40 text-[#1A1A1A] px-4 py-3 rounded-lg border border-[#1A1A1A]/10 outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans placeholder:text-[#1A1A1A]/40 text-sm" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Agent</label>
+            <div className="relative">
+              <select className="w-full bg-white/40 text-[#1A1A1A] px-4 py-3 rounded-lg border border-[#1A1A1A]/10 appearance-none outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans text-sm">
+                <option>All</option>
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4 pointer-events-none" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className="text-xs text-[#1A1A1A]/70 font-sans tracking-wide">Property ID</label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#1A1A1A]/40 w-4 h-4" />
+              <input type="text" placeholder="Search..." className="w-full bg-white/40 text-[#1A1A1A] pl-10 pr-4 py-3 rounded-lg border border-[#1A1A1A]/10 outline-none focus:ring-1 focus:ring-[#1A1A1A] font-sans placeholder:text-[#1A1A1A]/40 text-sm" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 justify-end">
+            <button className="w-full bg-[#111625] text-white py-3 rounded-lg font-sans text-sm hover:bg-[#1A1A1A]/80 transition-colors border border-transparent">
+              Reset
+            </button>
           </div>
         </div>
       </div>
