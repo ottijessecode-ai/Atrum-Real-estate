@@ -25,7 +25,7 @@ export function SiteVisitModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent showCloseButton={false} className="w-[90vw] max-w-[800px] h-[80vh] min-h-[400px] max-h-[500px] p-0 overflow-hidden bg-white border-none rounded-xl relative">
+      <DialogContent showCloseButton={false} className="w-[90vw] max-w-[800px] h-[80vh] min-h-[400px] max-h-[500px] p-0 overflow-hidden bg-white border-none rounded-xl !top-auto !bottom-8 !translate-y-0 shadow-2xl">
         <DialogClose className="absolute top-4 right-4 z-50 p-2 bg-[#1A1A1A]/5 hover:bg-[#1A1A1A]/10 rounded-full text-[#1A1A1A] transition-colors focus:outline-none">
           <X className="w-5 h-5" />
           <span className="sr-only">Close</span>

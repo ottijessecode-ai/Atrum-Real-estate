@@ -4,6 +4,7 @@ import { Search, ChevronDown } from 'lucide-react';
 import { gsap } from 'gsap';
 import { SITE_CONFIG } from '@/config/siteConfig';
 import { PROPERTIES } from '@/data/properties';
+import { SITE_DATA } from '@/constants/siteData';
 
 export function FeaturedListings() {
   const sectionRef = useRef<HTMLDivElement>(null);

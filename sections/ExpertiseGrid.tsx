@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SITE_CONFIG } from '@/config/siteConfig';
 import { PROPERTIES } from '@/data/properties';
+import { SITE_DATA } from '@/constants/siteData';
 
 gsap.registerPlugin(ScrollTrigger);
 

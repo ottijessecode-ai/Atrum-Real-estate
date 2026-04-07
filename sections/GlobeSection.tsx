@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { SITE_CONFIG } from '@/config/siteConfig';
 import { PROPERTIES } from '@/data/properties';
+import { SITE_DATA } from '@/constants/siteData';
 
 interface BranchCity {
   name: string;
