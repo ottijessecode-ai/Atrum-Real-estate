@@ -8,9 +8,11 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Check } from "lucide-react";
+import { SITE_DATA } from "@/constants/siteData";
 
 export function SiteVisitModal() {
   const [open, setOpen] = useState(false);
+  const listing = SITE_DATA.featured.properties[0];
 
   useEffect(() => {
     // Show modal after 3 seconds on the home page
@@ -22,45 +24,58 @@ export function SiteVisitModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-[900px] p-0 overflow-hidden bg-white border-none rounded-xl">
+      <DialogContent className="w-[90vw] max-w-[800px] h-[80vh] min-h-[400px] max-h-[500px] p-0 overflow-hidden bg-white border-none rounded-xl">
         <DialogTitle className="sr-only">Schedule a site visit</DialogTitle>
-        <DialogDescription className="sr-only">Details about our Treasure tucked away in Surulere and scheduling a visit.</DialogDescription>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <DialogDescription className="sr-only">Details about {listing.title} and scheduling a visit.</DialogDescription>
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
           {/* External Image placeholder */}
-          <div className="relative h-[250px] md:h-[500px] w-full">
+          <div className="relative h-[200px] md:h-full w-full">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80"
-              alt="Perez Court Architecture"
+              src="https://images.unsplash.com/photo-1600607687931-cecebd80d600?auto=format&fit=crop&q=80"
+              alt={listing.title}
               className="w-full h-full object-cover"
             />
+            <div className="absolute top-4 left-4 z-10">
+              <span className="font-heading text-[9px] tracking-widest uppercase px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#1A1A1A] border border-[#1A1A1A]/5 shadow-sm">
+                {listing.tag}
+              </span>
+            </div>
           </div>
-          <div className="p-8 md:p-12 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1A1A1A] mb-6 leading-[1.1]">
-              Our Treasure tucked away in Surulere
+          <div className="p-6 md:p-8 flex flex-col justify-center h-full">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-[#1A1A1A] mb-2 leading-[1.1]">
+              {listing.title}
             </h2>
-            <p className="text-[#1A1A1A]/70 mb-8 font-sans text-sm md:text-base leading-relaxed">
-              A well-established neighborhood boasting solid infrastructure and fantastic access to all that Lagos has to offer. At Perez Court, you can enjoy modern living in a vibrant, central location.
+            <p className="font-heading text-[10px] text-[#1A1A1A]/50 tracking-[0.15em] uppercase mb-4">
+              {listing.location}
             </p>
-            <ul className="space-y-4 mb-10">
+            <p className="text-[#1A1A1A]/70 mb-6 font-sans text-xs md:text-sm leading-relaxed line-clamp-3">
+              A well-established neighborhood boasting solid infrastructure and fantastic access to all that the city has to offer. Enjoy modern living in a vibrant, centralized location with immediate value.
+            </p>
+            <ul className="space-y-3 mb-8">
               {[
-                "Well-Developed Infrastructure",
-                "Tranquil Environment",
-                "Immediate Value",
+                `${listing.beds} Bedrooms, ${listing.baths} Baths`,
+                `${listing.sqft} sqft Living Space`,
+                "Premium Infrastructure",
               ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-[#1A1A1A]/80 font-sans text-sm md:text-base">
+                <li key={i} className="flex items-center gap-3 text-[#1A1A1A]/80 font-sans text-xs md:text-sm">
                   <div className="bg-[#48BB78] rounded p-[2px]">
-                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   {item}
                 </li>
               ))}
             </ul>
-            <button
-              onClick={() => setOpen(false)}
-              className="bg-[#111625] text-white py-4 px-6 md:px-8 w-full font-sans font-medium text-sm md:text-base hover:bg-brand-gold transition-colors duration-300 rounded"
-            >
-              Schedule your site visit today!
-            </button>
+            <div className="mt-auto">
+              <p className="font-display text-xl text-[#1A1A1A] font-medium tracking-tight mb-3">
+                {listing.price}
+              </p>
+              <button
+                onClick={() => setOpen(false)}
+                className="bg-[#111625] text-white py-3.5 px-6 w-full font-sans font-medium text-sm hover:bg-brand-gold transition-colors duration-300 rounded"
+              >
+                Schedule your site visit today!
+              </button>
+            </div>
           </div>
         </div>
       </DialogContent>
