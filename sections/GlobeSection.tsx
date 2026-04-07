@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { SITE_DATA } from '../constants/siteData';
+import { SITE_CONFIG } from '@/config/siteConfig';
+import { PROPERTIES } from '@/data/properties';
 
 interface BranchCity {
   name: string;

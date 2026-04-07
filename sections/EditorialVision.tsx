@@ -2,7 +2,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SITE_DATA } from '../constants/siteData';
+import { SITE_CONFIG } from '@/config/siteConfig';
+import { PROPERTIES } from '@/data/properties';
 
 gsap.registerPlugin(ScrollTrigger);
 

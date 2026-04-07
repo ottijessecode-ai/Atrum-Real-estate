@@ -6,13 +6,14 @@ import {
   DialogContent,
   DialogTitle,
   DialogDescription,
+  DialogClose,
 } from "@/components/ui/dialog";
-import { Check } from "lucide-react";
-import { SITE_DATA } from "@/constants/siteData";
+import { Check, X } from "lucide-react";
+import { PROPERTIES } from "@/data/properties";
 
 export function SiteVisitModal() {
   const [open, setOpen] = useState(false);
-  const listing = SITE_DATA.featured.properties[0];
+  const listing = PROPERTIES[0];
 
   useEffect(() => {
     // Show modal after 3 seconds on the home page
@@ -24,7 +25,11 @@ export function SiteVisitModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="w-[90vw] max-w-[800px] h-[80vh] min-h-[400px] max-h-[500px] p-0 overflow-hidden bg-white border-none rounded-xl">
+      <DialogContent showCloseButton={false} className="w-[90vw] max-w-[800px] h-[80vh] min-h-[400px] max-h-[500px] p-0 overflow-hidden bg-white border-none rounded-xl relative">
+        <DialogClose className="absolute top-4 right-4 z-50 p-2 bg-[#1A1A1A]/5 hover:bg-[#1A1A1A]/10 rounded-full text-[#1A1A1A] transition-colors focus:outline-none">
+          <X className="w-5 h-5" />
+          <span className="sr-only">Close</span>
+        </DialogClose>
         <DialogTitle className="sr-only">Schedule a site visit</DialogTitle>
         <DialogDescription className="sr-only">Details about {listing.title} and scheduling a visit.</DialogDescription>
         <div className="grid grid-cols-1 md:grid-cols-2 h-full">
